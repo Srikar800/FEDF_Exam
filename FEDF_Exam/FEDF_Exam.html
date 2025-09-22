@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation using javascript</title>
+</head>
+<style>
+body {
+        background-color: Blue;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: down;
+}
+</style>
+<body>
+
+    <center>
+        <form>
+            <p>Login Form</p>
+
+            <label>Full Name</label>
+            <input type="text" id="un">
+
+            <br>
+            <br>
+
+            <label>Email Id</label>
+            <input type="email" id="un">
+
+            <br>
+            <br>
+
+            <label>Password</label>
+            <input type="password" id="pwd">
+
+            <br>
+            <br>
+
+            <label>Phone Number</label>
+            <input type="number" id="un">
+
+            <br>
+            <br>
+
+            <button onclick="fun1()">Submit now</button>
+
+        </form>
+    </center>
+    <script>
+
+        function fun1() {
+
+            var username = document.getElementById("un").value;
+            var password = document.getElementById("pwd").value;
+
+            let isValid = true;
+
+            if (!username) {
+                alert("Name must be filled out");
+                isValid = false;
+            }
+
+            let pwd = "abc123";
+
+            if(password!=pwd) {
+                alert("Password valid");
+                isValid = false;
+            }
+
+            alert("Login is successful!");
+
+        }
+        
+    </script>
+</body>
+
+</html>
